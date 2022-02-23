@@ -81,7 +81,7 @@ class _RootScreenState extends State<RootScreen> {
             ),
             const BottomNavigationBarItem(
               icon: Icon(Icons.category_outlined),
-              label: 'Categoroes',
+              label: 'Categories',
             ),
             BottomNavigationBarItem(
               icon: StreamBuilder<List<Item>>(
