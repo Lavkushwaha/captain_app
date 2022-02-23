@@ -1,5 +1,6 @@
-import 'package:captain_app/routes.dart';
-import 'package:captain_app/shared/services/navigation_service.dart';
+import 'package:captain_app/blocs/splash_bloc/splash_bloc.dart';
+import 'package:captain_app/utils/assets.dart';
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,17 +13,39 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 3), () {
-      appNavigationService.pushReplacementNamed(Routes.home);
-    });
+    splashBloc.moveToHome();
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Spalsh Screen'),
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Center(
+          child: Stack(
+            children: const [
+              FlareActor(Assets.loadingAnimation,
+                  alignment: Alignment.center,
+                  fit: BoxFit.contain,
+                  isPaused: false,
+                  animation: "Background Loop"),
+              Center(
+                child: Text(
+                  "Captain App",
+                  style: TextStyle(
+                    fontSize: 45,
+                    fontFamily: "Mulish-Bold",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
