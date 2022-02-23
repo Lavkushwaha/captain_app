@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.1
+  rxdart: ^0.27.3
 
 dev_dependencies:
   flutter_lints: ^1.0.0
@@ -63,8 +64,26 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Mulish-Light
+      fonts:
+        - asset: assets/fonts/Mulish-Light.ttf
 
-  
+    - family: Mulish-Regular
+      fonts:
+        - asset: assets/fonts/Mulish-Regular.ttf
+
+    - family: Mulish-SemiBold
+      fonts:
+        - asset: assets/fonts/Mulish-SemiBold.ttf
+
+    - family: Mulish-Bold
+      fonts:
+        - asset: assets/fonts/Mulish-Bold.ttf
+
+    - family: Mulish-ExtraBold
+      fonts:
+        - asset: assets/fonts/Mulish-ExtraBold.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
