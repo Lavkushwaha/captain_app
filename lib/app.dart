@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         fontFamily: 'Mulish-Regular',
       ),
-      debugShowCheckedModeBanner: appConfig.isDebugMode,
+      debugShowCheckedModeBanner: appConfig.showDebugBanner,
       initialRoute: Routes.splash,
       onGenerateRoute: Routes.getGeneratedRoute,
       // routes: Routes.getGeneratedRoute,
