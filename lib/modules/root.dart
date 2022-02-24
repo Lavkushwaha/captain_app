@@ -101,7 +101,7 @@ class _RootScreenState extends State<RootScreen> {
                             itemCount.toString(),
                             style: const TextStyle(color: AppColors.whiteColor),
                           ),
-                          child: const Icon(Icons.settings),
+                          child: const Icon(Icons.shopping_bag_outlined),
                         ))
                       ],
                     );
