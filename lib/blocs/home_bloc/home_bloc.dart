@@ -1,7 +1,6 @@
 import 'package:captain_app/blocs/base_bloc.dart';
 import 'package:captain_app/shared/models/item_model.dart';
 import 'package:captain_app/shared/repository/item_repository.dart';
-import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 class HomeBloc extends Bloc {
@@ -15,7 +14,7 @@ class HomeBloc extends Bloc {
   _getData() async {
     _loadingController.add(true);
     _items = await ItemRepository.getItems();
-    debugPrint("_items: $_items");
+    // debugPrint("_items: $_items");
     _loadingController.add(false);
   }
 
