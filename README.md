@@ -1,10 +1,17 @@
-# captain_app
+# CAPTAIN APP
 
-A new Flutter project.
+Basic Cart Management App, Local.
+
+
+![Captain App](https://github.com/Lavkushwaha/captain_app/blob/master/captain_app_preview.gif)
+
+
+
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+```Main.dart```
 
 A few resources to get you started if this is your first Flutter project:
 
