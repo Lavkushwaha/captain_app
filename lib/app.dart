@@ -5,6 +5,7 @@ import 'package:captain_app/blocs/splash_bloc/splash_bloc.dart';
 import 'package:captain_app/config/app_config.dart';
 import 'package:captain_app/routes.dart';
 import 'package:captain_app/shared/services/navigation_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,15 +20,6 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
 
 //DISPOSE FUNCTION ADDED FOR BLOCS
-  @override
-  void dispose() {
-    homeBloc.dispose();
-    cartBloc.dispose();
-    addressBloc.dispose();
-    splashBloc.dispose();
-
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +31,15 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'Mulish-Regular',
       ),
       debugShowCheckedModeBanner: appConfig.showDebugBanner,
+      enableLog: kDebugMode,
+      onDispose: () {
+        homeBloc.dispose();
+        cartBloc.dispose();
+        addressBloc.dispose();
+        splashBloc.dispose();
+      },
       initialRoute: Routes.splash,
+      // onGenerateTitle: (context) => appConfig.appName.toString(),
       onGenerateRoute: Routes.getGeneratedRoute,
       // routes: Routes.getGeneratedRoute,
     );
