@@ -38,7 +38,7 @@ class DeliverySection extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Delivey Date : ",
+                    const Text("Delivery Date : ",
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.normal,
@@ -46,7 +46,7 @@ class DeliverySection extends StatelessWidget {
                         )),
                     Text(
                         " ${HelperFunctions.getDateTime(addressBloc.deliveryDate)}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           // color: AppColors.whiteColor
