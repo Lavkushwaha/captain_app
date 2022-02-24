@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:captain_app/app.dart';
 import 'package:captain_app/config/app_config.dart';
@@ -21,7 +20,8 @@ void main() async {
       debugPrint("FLUTTER STACKTRACE : ${details.stack}");
     }
     if (appConfig.isReleaseMode) {
-      exit(1);
+      // exit(1);
+      //NO LOGS/PRINTS IN RELEASE MODE
     }
   };
 
