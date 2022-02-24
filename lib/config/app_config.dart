@@ -19,6 +19,8 @@ class AppConfig {
       appName = "Captain App";
       showDebugBanner = false;
     } else {
+      // showDebugBanner = false;
+
       appName = "Captain App Debug";
     }
   }
